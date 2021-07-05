@@ -1,0 +1,5 @@
+wskaznik numer 1
+wskaznik numer 3
+wskaznik numer 2
+wskaznik numer 4
+wskaznik numer 5

@@ -1,0 +1,19 @@
+VBox {
+  -fx-background-color: #F5F5DC;
+}
+.button {
+  -fx-background-color: #7FFFD4;
+  -fx-border-color: #00FFFF;
+}
+.text-field {
+  -fx-background-color: #FFE4C4;
+}
+#last_res {
+  -fx-background-color: #FFE4C4;
+}
+#op_lab {
+  -fx-background-color: #FFE4C4;
+}
+.menu-bar {
+    -fx-background-color: #7FFFD4;
+}
