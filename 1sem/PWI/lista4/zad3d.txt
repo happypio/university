@@ -1,0 +1,42 @@
+      5 *Abraham.*
+      5 *Aptekarz.*
+     12 *Baltazar.*
+     61 *Benwolio.*
+      3 *Brat Jan.*
+      1 *Czwarty sługa.*
+      5 *Dowódca.*
+      1 *Dowódca warty.*
+      2 *Drugi Kapulet.*
+      3 *Drugi muzykant.*
+      1 *Drugi sługa.*
+      1 *Drugi Sługa.*
+      2 *Drugi służący.*
+      1 *Drugi wartownik.*
+      1 *Druugi muzykant.*
+     12 *Grzegorz.*
+    111 *Julia.*
+     48 *Kapulet.*
+     16 *Książę.*
+     89 *Marta.*
+     61 *Merkucio.*
+     10 *Monteki.*
+      1 *Muzykanci.*
+     55 *O. Laurenty.*
+     44 *Pani Kapulet.*
+      2 *Pani Monteki.*
+     21 *Parys.*
+      4 *Paź.*
+      1 *Paź Parysa.*
+      7 *Pierwszy muzykant.*
+      3 *Pierwszy obywatel.*
+      4 *Pierwszy sługa.*
+      1 *Pierwszy wartownik.*
+     14 *Piotr.*
+    160 *Romeo.*
+     17 *Samson.*
+      1 *Sługa.*
+      9 *Służący.*
+      1 *Trzech muzykantów.*
+      1 *Trzeci muzykant.*
+      1 *Trzeci sługa.*
+     16 *Tybalt.*

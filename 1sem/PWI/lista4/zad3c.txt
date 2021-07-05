@@ -1,0 +1,814 @@
+*Aptekarz.*
+*Trzech muzykantów.*
+*Paź Parysa.*
+*Piotr.*
+*Dowódca warty.*
+*Samson.*
+*Grzegorz.*
+*Samson.*
+*Grzegorz.*
+*Samson.*
+*Grzegorz.*
+*Samson.*
+*Grzegorz.*
+*Samson.*
+*Grzegorz.*
+*Samson.*
+*Grzegorz.*
+*Samson.*
+*Grzegorz.*
+*Samson.*
+*Grzegorz.*
+*Samson.*
+*Grzegorz.*
+*Samson.*
+*Grzegorz.*
+*Samson.*
+*Grzegorz.*
+*Samson.*
+*Abraham.*
+*Samson.*
+*Abraham.*
+*Grzegorz.*
+*Abraham.*
+*Samson.*
+*Abraham.*
+*Samson.*
+*Samson.*
+*Abraham.*
+*Samson.*
+*Benwolio.*
+*Tybalt.*
+*Benwolio.*
+*Tybalt.*
+*Pierwszy obywatel.*
+*Kapulet.*
+*Pani Kapulet.*
+*Kapulet.*
+*Monteki.*
+*Pani Monteki.*
+*Książę.*
+*Monteki.*
+*Benwolio.*
+*Pani Monteki.*
+*Benwolio.*
+*Monteki.*
+*Benwolio.*
+*Monteki.*
+*Benwolio.*
+*Monteki.*
+*Benwolio.*
+*Monteki.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Kapulet.*
+*Parys.*
+*Kapulet.*
+*Parys.*
+*Kapulet.*
+*Służący.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Służący.*
+*Romeo.*
+*Służący.*
+*Romeo.*
+*Służący.*
+*Romeo.*
+*Służący.*
+*Romeo.*
+*Służący.*
+*Romeo.*
+*Służący.*
+*Romeo.*
+*Służący.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Pani Kapulet.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Pani Kapulet.*
+*Marta.*
+*Pani Kapulet.*
+*Marta.*
+*Pani Kapulet.*
+*Marta.*
+*Pani Kapulet.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Pani Kapulet.*
+*Julia.*
+*Marta.*
+*Pani Kapulet.*
+*Marta.*
+*Pani Kapulet.*
+*Marta.*
+*Pani Kapulet.*
+*Marta.*
+*Pani Kapulet.*
+*Julia.*
+*Służący.*
+*Pani Kapulet.*
+*Marta.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Benwolio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Benwolio.*
+*Romeo.*
+*Pierwszy sługa.*
+*Drugi sługa.*
+*Pierwszy sługa.*
+*Trzeci sługa.*
+*Pierwszy sługa.*
+*Czwarty sługa.*
+*Kapulet.*
+*Drugi Kapulet.*
+*Kapulet.*
+*Drugi Kapulet.*
+*Kapulet.*
+*Sługa.*
+*Romeo.*
+*Tybalt.*
+*Kapulet.*
+*Tybalt.*
+*Kapulet.*
+*Tybalt.*
+*Kapulet.*
+*Tybalt.*
+*Kapulet.*
+*Tybalt.*
+*Kapulet.*
+*Tybalt.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Marta.*
+*Romeo.*
+*Marta.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Marta.*
+*Romeo.*
+*Benwolio.*
+*Merkucio.*
+*Benwolio.*
+*Merkucio.*
+*Benwolio.*
+*Merkucio.*
+*Benwolio.*
+*Merkucio.*
+*Benwolio.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*Merkucio.*
+*Benwolio.*
+*Merkucio.*
+*Benwolio.*
+*Merkucio.*
+*Benwolio.*
+*Merkucio.*
+*Benwolio.*
+*Merkucio.*
+*Benwolio.*
+*Merkucio.*
+*Benwolio.*
+*Merkucio.*
+*Benwolio.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Benwolio.*
+*Marta.*
+*Piotr.*
+*Marta.*
+*Merkucio.*
+*Marta.*
+*Merkucio.*
+*Marta.*
+*Merkucio.*
+*Marta.*
+*Romeo.*
+*Marta.*
+*Romeo.*
+*Marta.*
+*Merkucio.*
+*Marta.*
+*Benwolio.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Marta.*
+*Romeo.*
+*Marta.*
+*Piotr.*
+*Marta.*
+*Romeo.*
+*Marta.*
+*Romeo.*
+*Marta.*
+*Romeo.*
+*Marta.*
+*Romeo.*
+*Marta.*
+*Romeo.*
+*Marta.*
+*Romeo.*
+*Marta.*
+*Romeo.*
+*Marta.*
+*Romeo.*
+*Marta.*
+*Romeo.*
+*Marta.*
+*Piotr.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*Julia.*
+*O. Laurenty.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*O. Laurenty.*
+*Benwolio.*
+*Merkucio.*
+*Benwolio.*
+*Merkucio.*
+*Benwolio.*
+*Merkucio.*
+*Benwolio.*
+*Merkucio.*
+*Benwolio.*
+*Merkucio.*
+*Merkucio.*
+*Tybalt.*
+*Merkucio.*
+*Tybalt.*
+*Merkucio.*
+*Benwolio.*
+*Merkucio.*
+*Tybalt.*
+*Merkucio.*
+*Tybalt.*
+*Romeo.*
+*Tybalt.*
+*Romeo.*
+*Merkucio.*
+*Tybalt.*
+*Merkucio.*
+*Tybalt.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Benwolio.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Merkucio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Tybalt.*
+*Romeo.*
+*Benwolio.*
+*Romeo.*
+*Benwolio.*
+*Pierwszy obywatel.*
+*Benwolio.*
+*Pierwszy obywatel.*
+*Książę.*
+*Benwolio.*
+*Pani Kapulet.*
+*Książę.*
+*Benwolio.*
+*Pani Kapulet.*
+*Książę.*
+*Monteki.*
+*Książę.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*O. Laurenty.*
+*O. Laurenty.*
+*Marta.*
+*O. Laurenty.*
+*Marta.*
+*O. Laurenty.*
+*Marta.*
+*Romeo.*
+*Marta.*
+*Romeo.*
+*Marta.*
+*Romeo.*
+*O. Laurenty.*
+*Marta.*
+*Romeo.*
+*Marta.*
+*Romeo.*
+*O. Laurenty.*
+*Romeo.*
+*Kapulet.*
+*Parys.*
+*Pani Kapulet.*
+*Kapulet.*
+*Parys.*
+*Kapulet.*
+*Parys.*
+*Kapulet.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Romeo.*
+*Julia.*
+*Pani Kapulet.*
+*Julia.*
+*Pani Kapulet.*
+*Julia.*
+*Pani Kapulet.*
+*Julia.*
+*Pani Kapulet.*
+*Julia.*
+*Pani Kapulet.*
+*Julia.*
+*Pani Kapulet.*
+*Julia.*
+*Pani Kapulet.*
+*Julia.*
+*Pani Kapulet.*
+*Julia.*
+*Pani Kapulet.*
+*Julia.*
+*Pani Kapulet.*
+*Julia.*
+*Pani Kapulet.*
+*Kapulet.*
+*Pani Kapulet.*
+*Kapulet.*
+*Julia.*
+*Kapulet.*
+*Pani Kapulet.*
+*Julia.*
+*Kapulet.*
+*Marta.*
+*Kapulet.*
+*Marta.*
+*Kapulet.*
+*Marta.*
+*Kapulet.*
+*Pani Kapulet.*
+*Kapulet.*
+*Julia.*
+*Pani Kapulet.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*Marta.*
+*Julia.*
+*O. Laurenty.*
+*Parys.*
+*O. Laurenty.*
+*Parys.*
+*O. Laurenty.*
+*Parys.*
+*Julia.*
+*Parys.*
+*Julia.*
+*O. Laurenty.*
+*Parys.*
+*Julia.*
+*Parys.*
+*Julia.*
+*Parys.*
+*Julia.*
+*Parys.*
+*Julia.*
+*Parys.*
+*Julia.*
+*O. Laurenty.*
+*Parys.*
+*Julia.*
+*O. Laurenty.*
+*Julia.*
+*O. Laurenty.*
+*Julia.*
+*O. Laurenty.*
+*Julia.*
+*O. Laurenty.*
+*Julia.*
+*Drugi służący.*
+*Kapulet.*
+*Drugi służący.*
+*Kapulet.*
+*Marta.*
+*Kapulet.*
+*Marta.*
+*Kapulet.*
+*Julia.*
+*Kapulet.*
+*Julia.*
+*Kapulet.*
+*Julia.*
+*Pani Kapulet.*
+*Kapulet.*
+*Pani Kapulet.*
+*Kapulet.*
+*Julia.*
+*Pani Kapulet.*
+*Julia.*
+*Pani Kapulet.*
+*Julia.*
+*Pani Kapulet.*
+*Marta.*
+*Kapulet.*
+*Marta.*
+*Kapulet.*
+*Pani Kapulet.*
+*Kapulet.*
+*Pierwszy sługa.*
+*Kapulet.*
+*Drugi Sługa.*
+*Kapulet.*
+*Marta.*
+*Pani Kapulet.*
+*Marta.*
+*Pani Kapulet.*
+*Marta.*
+*Pani Kapulet.*
+*Kapulet.*
+*Marta.*
+*Pani Kapulet.*
+*Kapulet.*
+*Marta.*
+*Pani Kapulet.*
+*Kapulet.*
+*O. Laurenty.*
+*Kapulet.*
+*Parys.*
+*Pani Kapulet.*
+*Marta.*
+*Parys.*
+*Kapulet.*
+*O. Laurenty.*
+*Kapulet.*
+*O. Laurenty.*
+*Pierwszy muzykant.*
+*Marta.*
+*Druugi muzykant.*
+*Piotr.*
+*Pierwszy muzykant.*
+*Piotr.*
+*Pierwszy muzykant.*
+*Piotr.*
+*Muzykanci.*
+*Piotr.*
+*Pierwszy muzykant.*
+*Piotr.*
+*Pierwszy muzykant.*
+*Piotr.*
+*Drugi muzykant.*
+*Piotr.*
+*Pierwszy muzykant.*
+*Piotr.*
+*Drugi muzykant.*
+*Piotr.*
+*Trzeci muzykant.*
+*Piotr.*
+*Pierwszy muzykant.*
+*Drugi muzykant.*
+*Romeo.*
+*Baltazar.*
+*Romeo.*
+*Baltazar.*
+*Romeo.*
+*Baltazar.*
+*Romeo.*
+*Aptekarz.*
+*Romeo.*
+*Aptekarz.*
+*Romeo.*
+*Aptekarz.*
+*Romeo.*
+*Aptekarz.*
+*Romeo.*
+*O. Laurenty.*
+*Brat Jan.*
+*O. Laurenty.*
+*Brat Jan.*
+*O. Laurenty.*
+*Brat Jan.*
+*O. Laurenty.*
+*Parys.*
+*Paź.*
+*Parys.*
+*Romeo.*
+*Baltazar.*
+*Romeo.*
+*Baltazar.*
+*Romeo.*
+*Parys.*
+*Romeo.*
+*Parys.*
+*Romeo.*
+*Paź.*
+*Romeo.*
+*O. Laurenty.*
+*Baltazar.*
+*O. Laurenty.*
+*Baltazar.*
+*O. Laurenty.*
+*Baltazar.*
+*O. Laurenty.*
+*Baltazar.*
+*O. Laurenty.*
+*Baltazar.*
+*O. Laurenty.*
+*Baltazar.*
+*O. Laurenty.*
+*O. Laurenty.*
+*Julia.*
+*Julia.*
+*Paź.*
+*Dowódca.*
+*Pierwszy wartownik.*
+*Dowódca.*
+*Drugi wartownik.*
+*Dowódca.*
+*Książę.*
+*Kapulet.*
+*Pani Kapulet.*
+*Książę.*
+*Dowódca.*
+*Książę.*
+*Dowódca.*
+*Kapulet.*
+*Pani Kapulet.*
+*Książę.*
+*Monteki.*
+*Książę.*
+*Monteki.*
+*Książę.*
+*O. Laurenty.*
+*Książę.*
+*O. Laurenty.*
+*Książę.*
+*Baltazar.*
+*Książę.*
+*Paź.*
+*Książę.*
+*Kapulet.*
+*Monteki.*
+*Kapulet.*
+*Książę.*

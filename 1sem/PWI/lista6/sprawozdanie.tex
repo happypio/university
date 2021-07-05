@@ -1,0 +1,94 @@
+\documentclass[a4paper]{article}
+% Kodowanie latain 2
+%\usepackage[latin2]{inputenc}
+\usepackage[T1]{fontenc}
+% Można też użyć UTF-8
+\usepackage[utf8]{inputenc}
+
+% Język
+\usepackage[polish]{babel}
+% \usepackage[english]{babel}
+
+% Rózne przydatne paczki:
+% - znaczki matematyczne
+\usepackage{amsmath, amsfonts}
+% - wcięcie na początku pierwszego akapitu
+\usepackage{indentfirst}
+% - komenda \url 
+\usepackage{hyperref}
+% - dołączanie obrazków
+\usepackage{graphics}
+% - szersza strona
+\usepackage[nofoot,hdivide={2cm,*,2cm},vdivide={2cm,*,2cm}]{geometry}
+\frenchspacing
+% - brak numerów stron
+\pagestyle{empty}
+\usepackage{filecontents,listings,graphicx,varwidth}
+% dane autora
+\author{Piotr Piesiak,961365601}
+\title{Przykładowy plik w systemie \LaTeX}
+\date{\today}
+
+% początek dokumentu
+\begin{document}
+\maketitle cos tam
+\section{polecenie id}
+polecenie id sluzy do wyswietlenia informacji o uzytkowniku i grupie, budowa:
+id nazwa-uzytkownika, jesli nie podamy nazwy to domyslnie sprawdzimy informacje o uzytkowniku aktualnie zalogowanym. Dostajemy ifnormacje na temat: do jakiej grupy nalezy uzytkownik, jaki numer majat te grupy.
+
+
+\section{czas uniksowy}
+sposob przedstawienia czasu jako liczba sekund od poczatku 1970 roku czasu UTC.
+Nie uwzglednia on sekund przestepnych - tzn. sekund, ktore sie dodaje w roku w celu zsynchronizowania
+czasu UTC z czasem słonecznym. (spowodowane jest to zmianami obortu ziemi). W systemie unix czas uniksowy przedstawiany jest jako 32 bitowa liczba sekund, ktore uoplynely od 1 stycznia 1970 roku.
+Poniewaz liczbe sekund interpetuje sie jako liczbe ze znakiem, w ktorej wartosci ujemne nie sa wykorzystywane, dostepny przedzial czasu wynosi limit int. W zwiazku z ograniczonym przedzialem,19 stycznia 2038 roku o godzinie 03:14:07 czasu UTC, ilosc sekund wykorzysta cala pojemnosc limitu inta. W nastepnej sekundzie czas uniksowy (przekroczy wartosc zatem zmieni znak na -) zacznie wskazywac date w roku 1901 lub gdy sie wyzeruje, poczatek mierzenia czasu w 1970. Moze to spowodowac bledy w programach korzystajacych z uniksowego czasu.
+
+
+
+
+
+
+\section{roznica miedzy kompilowaniem raz, a kompilowaniem dwa razy}
+Za pierwszym razem kompilator gdy widzi reflinki zapisuje je w pliku log bo jeszcze nie doszedl do konca pliku i nie wie do czego sie odnosza, za drugim razem gdy juz wie jak wyglada caly plik moze polaczyc reflinki z odnosnikami dzieki czemu reflinki staja sie aktywne
+
+
+
+\section{czwarty rozdzial}
+awdakjnj
+
+
+
+
+
+
+
+
+\section{zwierzatko}
+\begin{verbatim}
+Art by Joan G. Stark
+  _      _                        
+ : `.--.' ;              _....,_  
+ .'      `.      _..--'"'       `-._
+:          :_.-'"                  .`.
+:  6    6  :                     :  '.;
+:          :                      `..';
+`: .----. :'                          ;
+  `._Y _.'               '           ;
+    'U'      .'          `.         ; 
+       `:   ;`-..___       `.     .'`.
+       _:   :  :    ```"''"'``.    `.  `.
+     .'     ;..'            .'       `.'`
+    `.......'              `........-'`
+\end{verbatim}
+\ \\
+\hspace*{0,15cm}\_\ \ \ \ \ \ \_\\
+/\ \ $\backslash$.-"""-./\ \ $\backslash$\\
+$\backslash$ \ \ -\ \ \ -\ \ /\\
+\hspace*{0,1cm}|\ \ o\ \ \ o\ \ |\\
+\hspace*{0,1cm}$\backslash$\ \ .-'''-.\ /\\
+\ \ '-$\backslash$\_Y\_/-'\\
+\hspace*{0,6cm}`--`
+
+
+\end{document}
+
