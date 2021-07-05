@@ -1,0 +1,87 @@
+\documentclass[a4paper]{article}
+% Kodowanie latain 2
+%\usepackage[latin2]{inputenc}
+\usepackage[T1]{fontenc}
+% Można też użyć UTF-8
+\usepackage[utf8]{inputenc}
+
+% Język
+\usepackage[polish]{babel}
+% \usepackage[english]{babel}
+
+% Rózne przydatne paczki:
+% - znaczki matematyczne
+\usepackage{amssymb}
+\usepackage{amsmath, amsfonts}
+% - wcięcie na początku pierwszego akapitu
+\usepackage{indentfirst}
+% - komenda \url 
+\usepackage{hyperref}
+% - dołączanie obrazków
+\usepackage{graphics}
+% - szersza strona
+\usepackage[nofoot,hdivide={2cm,*,2cm},vdivide={2cm,*,2cm}]{geometry}
+\usepackage{lmodern}
+\usepackage{changepage}
+\newcommand*{\field}[1]{\mathbb{#1}}
+\frenchspacing
+% - brak numerów stron
+\pagestyle{empty}
+\begin{document}
+\begin{center}
+{\fontsize{20}{20}\selectfont Zadanie 7}
+\end{center}
+
+Weźmy dowolną dodatnią stochastyczną macierz A : n x n o wartości własnej $\lambda$ takiej, że $|\lambda| = 1$ Pokażę, że (1) dla wektora własnego $W \in \field{C}^{n}$ wartości własnej $\lambda$ możemy znaleźć $\alpha \in \field{C}$ i $V \in \field{R}^{n}$ , takie że $W = \alpha V$, (2) V z poprzedniego podpunktu takie, że $V > 0$ oraz (3) $A$ ma jedynie rzeczyiwste wartości własne o module 1.\\
+\begin{adjustwidth}{30pt}{30pt}
+\textbf{1.} Z definicji wartości własnej, wiemy że $AW = \lambda W$. Określmy równość modułów wektorów w $\field{C}^{n}$ jako: dla $Z,S \in \field{C}^{n}$ $|Z| = |S| \Leftrightarrow \forall_{{i}\in \langle 1,n\rangle}$ $|Z_{i}| = |S_{i}|$. Wtedy:
+$$|AW| = |\lambda W| = |\lambda| |W| = |W| \quad \quad *$$
+Z nierówności trójkąta mamy: $\forall_{i \in \langle 1,n\rangle} \quad |\sum_{j=1}^{n}a_{ij}w_{j}| \leq \sum_{j=1}^{n}a_{ij}|w_{j}|$ zatem każdy wiersz wektora $A|W|$ jest większy lub równy wierszowi w $|AW|$.$\quad \quad \quad \quad \quad \quad  \quad **$
+$$W \quad szczególności \quad \sum_{i=1}^{n}|(\sum_{j=1}^{n}a_{ij}w_{j})| \leq \sum_{i=1}^{n}(\sum_{j=1}^{n}a_{ij}|w_{j}|) \quad \Leftrightarrow \quad \| |AW| \|_{1} \leq \| A|W| \|_{1} \quad ***$$
+Korzystając z własności z zadania 1 tzn. dla dowolnego wektora $V$ i macierzy stochastycznej dodatniej A zachodzi $ \| AV \|_{1} \leq \| V \|_{1}$ wiemy, że
+$$\| A|W| \|_{1} \leq \| |W| \|_{1}$$
+Korzystając z (*) oraz (***) otrzymujemy:
+$$\| |AW| \|_{1} \leq \| A|W| \|_{1} \leq \| |W| \|_{1} = \| |AW| \|_{1} \quad \Leftrightarrow \quad
+\| A|W| \|_{1} = \| |AW| \|_{1} \quad ****$$
+Ponieważ (**) każdy wiersz wektora $A|W|$ jest większy lub równy wierszowi w $|AW|$ i z równości (****) otrzymujemy:
+$$ \forall_{ i \in \langle 1,n\rangle} (|AW|)_{i} = (A|W|)_{i} \quad czyli:$$
+$$|a_{i1}w_{1} + a_{i2}w_{2} + ... + a_{i(n-1)}w_{n-1} + a_{in}w_{n}| = a_{i1}|w_{1}| + a_{i2}|w_{2}| + ... + a_{i(n-1)}|w_{n-1}| + a_{in}|w_{n}| \quad \#$$
+\textbf{LEMAT 1.} Dla $z_{1},z_{2},...,z_{n} \in \field{C}$ jeśli zachodzi $|z_{1} + z_{2} + ... + z_{n}| = |z_{1}| + |z_{2}| + ... + |z_{n}|$ to $ \forall_{ k \in \langle 1,n\rangle} |z_{1} + z_{2} + ... + z_{k}| = |z_{1}| + |z_{2}| + ... + |z_{k}|$. Dowód:\\
+Z nierówności trójkąta mamy $$|z_{1} + z_{2} + ... + z_{n}| \leq |z_{1} + z_{2} + ... + z_{n-1}| + |z_{n}|$$ $$|z_{1} + z_{2} + ... + z_{n-1}| + |z_{n}| \leq |z_{1}| + |z_{2}| + ... + |z_{n}|$$
+$$|z_{1} + z_{2} + ... + z_{n}| \leq |z_{1} + z_{2} + ... + z_{n-1}| + |z_{n}| \leq |z_{1} + z_{2} + ... + z_{n}|$$ zatem $|z_{1} + z_{2} + ... + z_{n-1}| = |z_{1}| + |z_{2}| + ... + |z_{n-1}|$. Wykonując powyższy schemat $k$ razy otrzymamy tezę.\\
+\textbf{LEMAT 2.} Dla $z_{1},z_{2},...,z_{n} \in \field{C}$ jeśli zachodzi $|z_{1} + z_{2} + ... + z_{n}| = |z_{1}| + |z_{2}| + ... + |z_{n}|$ to istnieje $\alpha \in  \field{C}$ i $v_{i} \in \field{R}$, takie że $\forall_{i \in \langle 1,n\rangle} \quad z_{i} = \alpha * v_{i}$. Dowód:\\
+Dla $ n = 1$ oczywiste, dla $n = 2$ mamy dla $z_{1} = a_{1} + b_{1}i$, $z_{2} = a_{2} + b_{2}i$:
+$$\sqrt{(a_{1} + a_{2})^2 +(b_{1} + b_{2})^2} = \sqrt{(a_{1})^2 + (b_{1})^2} + \sqrt{(a_{2})^2 + (b_{2})^2}$$
+$$(a_{1} + a_{2})^2 +(b_{1} + b_{2})^2 = (a_{1})^2 + (b_{1})^2 + (a_{2})^2 + (b_{2})^2 + 2\sqrt{((a_{1})^2 + (b_{1})^2)((a_{2})^2 + (b_{2})^2)}$$
+$$(a_{1}a_{2})^2 + (b_{1}b_{2})^2 + 2a_{1}a_{2}b_{1}b_{2} = (a_{1}a_{2})^2 + (b_{1}b_{2})^2 + (a_{1}b_{2})^2 + (b_{1}a_{2})^2$$
+$$ (a_{1}b_{2} - a_{2}b_{1})^2 = 0 \quad a_{1}b_{2} = a_{2}b_{1}$$
+Zatem $a_{1} = ca_{2}$ , $b_{1} = cb_{2}$ i co za tym idzie $z_{1} = cz_{2} \quad c \in \field{R}$. Niech $\alpha = z_{2}$, $v_{1} = c$ oraz $v_{2} = 1$ wtedy $z_{1} = \alpha v_{1}$ oraz $z_{2} = \alpha v_{2}$ zatem dla $i = 2$ własność zachodzi.\\
+Weźmy $ n  \geq 2$ i załóżmy, że wzór i własność zachodzi tzn. : $|z_{1} + z_{2} + ... + z_{n}| = |z_{1}| + |z_{2}| + ... + |z_{n}|$ i istnieje $\alpha \in  \field{C}$ i $v_{i} \in \field{R}$, takie że $\forall_{i \in \langle 1,n\rangle} \quad z_{i} = \alpha * v_{i}$.
+$$|z_{1} + z_{2} + ... + z_{n + 1}| = |z_{1} + z_{2} + ... + z_{n}| + |z_{n+1}| \quad z \quad Lematu \quad 1$$
+$$|z_{1} + z_{2} + ... + z_{n + 1}| = |\alpha(v_{1} + v_{2} + ... + v_{n})| + |z_{n+1}| \quad zał. \quad indukcyjne$$
+$$|\alpha x z_{n + 1}| = |\alpha x| + |z_{n+1}| \quad x = v_{1} + v_{2} + ... + v_{n} \quad x \in \field{R}$$
+Powtarzając schemat dowodu dla $ n = 2$ otrzymamy równość: $z_{n+1} = cx\alpha$ zatem dla $v_{n+1} = xc$ mamy $z_{n+1} = \alpha v_{n + 1}$. Na mocy indukcji mamy tezę lematu 2.\\\\
+Używając lematu 2 do (\#) otrzymamy
+$$W = \alpha V \quad \alpha \in \field{C} \quad V \in \field{R}^{n}$$
+$\hspace{420pt}\blacksquare$
+\textbf{2.} Załóżmy, że V ma współczynniki róznych znaków:
+$$\sum_{i=1}^{n}|v_{i}| > |\sum_{i=1}^{n}v_{i}| \quad \alpha \lambda V = \alpha A V$$
+$$\sum_{i=1}^{n}|\lambda v_{i}| = \sum_{i=1}^{n}|\sum_{j=1}^{n}a_{ij}v_{j}| < \sum_{i=1}^{n}\sum_{j=1}^{n}a_{ij}|v_{j}| = \sum_{j=1}^{n}|v_{j}|\sum_{i=1}^{n}a_{ij}$$
+$$\sum_{j=1}^{n}|v_{j}| \leq \sum_{j=1}^{n}|v_{j}| \quad sprzeczność$$
+Zatem V ma współczynniki tego samego znaku. V nie ma współrzędnej zerowej, ponieważ:
+$$v_{i} = \sum_{j=1}^{n}a_{ij}v_{j}$$
+Wszystkie $a_{ij}$ są dodatnie oraz conajmniej jeden $v_{j}$ jest niezerowy. Możemy założyć, że $ V > 0$, ponieważ możemy wyciągnąć $(-1)$ przed wektor i pomnożyć przez skalar $\alpha$. Wektor $\alpha V$ nadal będzie wektorem własnym.\\
+
+$\hspace{420pt}\blacksquare$
+
+\textbf{3.} Załóżmy, że $|\lambda| = 1$, ale $\lambda \neq 1$ wtedy:
+$$A\alpha V = \lambda \alpha V$$
+To znaczy, że V jest wektorem własnym dla $\lambda$ oraz wszystkie wektory postaci $aV$ gdzie $a \in \field{C}$ i $a \neq 0$ są wektorami własnymi tej wartości własnej.
+$$|A\alpha V| = |\lambda \alpha V|$$
+$$|\alpha|AV = |\alpha| V \quad ponieważ \quad A \quad V \quad mają \quad rzeczyiwste \quad dodatnie \quad współrzedne$$
+Z tego wynika, że $1$ jest wartością własną V. Sprzeczność bo $\lambda \neq 1$\\
+
+$\hspace{420pt}\blacksquare$
+\end{adjustwidth}
+Zatem jeśli A jest dodatnią macierzą kolumnowo stochastyczną (na liczbach zespolonych) to jeśli A ma wartość własną o module 1 to musi być ona rzeczyiwsta oraz wektor własny tej wartości jest postaci $\alpha V$, gdzie $\alpha \in \field{C}$ oraz $V > 0$. 
+\end{document}

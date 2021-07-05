@@ -1,0 +1,69 @@
+\documentclass[a4paper]{article}
+% Kodowanie latain 2
+%\usepackage[latin2]{inputenc}
+\usepackage[T1]{fontenc}
+% Można też użyć UTF-8
+\usepackage[utf8]{inputenc}
+
+% Język
+\usepackage[polish]{babel}
+% \usepackage[english]{babel}
+
+% Rózne przydatne paczki:
+% - znaczki matematyczne
+\usepackage{amssymb}
+\usepackage{amsmath, amsfonts}
+% - wcięcie na początku pierwszego akapitu
+\usepackage{indentfirst}
+% - komenda \url 
+\usepackage{hyperref}
+% - dołączanie obrazków
+\usepackage{graphics}
+% - szersza strona
+\usepackage[nofoot,hdivide={2cm,*,2cm},vdivide={2cm,*,2cm}]{geometry}
+\usepackage{lmodern}
+\usepackage{changepage}
+\frenchspacing
+% - brak numerów stron
+\pagestyle{empty}
+\begin{document}
+\begin{center}
+{\fontsize{20}{20}\selectfont Zadanie 7}
+\end{center}
+
+Weźmy dowolną macierz A : n x n. Pokażę, że (1) dla dowolnej kolumny j zachodzi wzór Laplace'a:\\
+$ det(A) = \sum_{i=1}^{n}(-1)^{i + j}a_{ij}det(A_{ij}) $ oraz (2) dla dowolnego wiersza i: $ det(A) = \sum_{j=1}^{n}(-1)^{i + j}a_{ij}det(A_{ij}) $. \\ \\
+\begin{adjustwidth}{30pt}{30pt}
+\textbf{1.} Weźmy dowolną kolumnę z macierzy A o indeksie j, $ 1 \le j \le n $. Niech B będzie macierzą A z przesuniętą kolumną j o (j-1) kolumn w lewo, tzn: 
+$$ \mathbf{A} = 
+\left( \begin{array}{ccccc}
+a_{11} & a_{12} & \ldots & a_{1j} & \ldots\\
+a_{21} & a_{22} & \ldots & a_{2j} & \ldots \\
+\vdots & \vdots & \ddots & \vdots & \ddots \\
+a_{(n-1)1} & a_{(n-1)2} & \ldots & a_{(n-1)j} & \ldots \\
+a_{n1} & a_{n2} & \ldots & a_{nj} & \ldots\\
+\end{array} \right)
+\mathbf{B} = 
+\left( \begin{array}{ccccc}
+a_{1j} & a_{11} & \ldots & a_{1(j-1)} & \ldots\\
+a_{2j} & a_{21} & \ldots & a_{2(j-1)} & \ldots \\
+\vdots & \vdots & \ddots & \vdots & \ddots \\
+a_{(n-1)j} & a_{(n-1)1} & \ldots & a_{(n-1)(j-1)} & \ldots \\
+a_{nj} & a_{n1} & \ldots & a_{n(j-1)} & \ldots\\
+\end{array} \right) $$
+Każda zmiana kolumny zmienia znak wyznacznika (6.1 Wyznacznik), zatem $ det(A) = (-1)^{j-1}det(B) $. Z dowiedzionego na wykładzie rozwinięcia Laplace'a dla pierwszej kolumny mamy (przy fakcie 6.6):
+$$ det(B) = \sum_{i=1}^{n}(-1)^{i + 1}b_{i1}det(B_{i1}) $$ 
+Zauważmy, że dla każdego i , $ 1 \le i \le n$ $b_{i1} = a_{ij}$ oraz $ det(A_{ij}) = det(B_{i1})$ (zarówno w $A_{ij}$ jak i $B_{i1}$ skreślamy tę samą kolumnę, a to co zostaje to ta sama macierz bez wiersza i), zatem możemy napisać:
+$$\sum_{i=1}^{n}(-1)^{i + 1}b_{i1}det(B_{i1}) = \sum_{i=1}^{n}(-1)^{i + 1}a_{ij}det(A_{ij})$$
+Ponieważ $det(B) = \frac{det(A)}{(-1)^{j-1}} $ to:
+$$ det(A) = (-1)^{j-1}\sum_{i=1}^{n}(-1)^{i + 1}a_{ij}det(A_{ij}) = \sum_{i=1}^{n}(-1)^{i + j}a_{ij}det(A_{ij})$$
+$\hspace{420pt}\blacksquare$
+\\\\
+\textbf{2.} Niech $A^{T}$ będzie transpozycją $A$. Z definicji macierzy transponowanej dla każdych i,j $ 1 \le i,j \le n $ $a_{ij} = (a^{T})_{ji}$ oraz $A_{ij}$. Zauważmy, że $(A_{ij})^{T} = (A^{T})_{ji}$ (usunięcie wiersza i i kolumny j z macierzy A i przetransponowanie jej, to to samo co usunięcie wiersza j i kolumny i z transpozycji A) oraz $det(A_{ij}) = det((A_{ij})^{T}) = det( (A^{T})_{ji})$ (Fakt.1 lista5). Z (1) wiemy, że:
+$$ det(A^{T}) = \sum_{j=1}^{n}(-1)^{i + j}(a^{T})_{ji}det((A^{T})_{ji}) $$
+Ponieważ $a_{ij} = (a^{T})_{ji}$ , $det(A_{ij}) = det( (A^{T})_{ji}$ oraz $det(A^{T}) = det(A)$ mamy:
+$$ det(A) = \sum_{j=1}^{n}(-1)^{i + j}a_{ij}det(A_{ij})$$
+$\hspace{420pt}\blacksquare$
+
+\end{adjustwidth}
+\end{document}

@@ -1,0 +1,92 @@
+\documentclass[a4paper]{article}
+% Kodowanie latain 2
+%\usepackage[latin2]{inputenc}
+\usepackage[T1]{fontenc}
+% Można też użyć UTF-8
+\usepackage[utf8]{inputenc}
+
+% Język
+\usepackage[polish]{babel}
+% \usepackage[english]{babel}
+
+% Rózne przydatne paczki:
+% - znaczki matematyczne
+\usepackage{amssymb}
+\usepackage{amsmath, amsfonts}
+% - wcięcie na początku pierwszego akapitu
+\usepackage{indentfirst}
+% - komenda \url 
+\usepackage{hyperref}
+% - dołączanie obrazków
+\usepackage{graphics}
+% - szersza strona
+\usepackage[nofoot,hdivide={2cm,*,2cm},vdivide={2cm,*,2cm}]{geometry}
+\usepackage{lmodern}
+\usepackage{changepage}
+\usepackage{tikz}
+\frenchspacing
+% - brak numerów stron
+\pagestyle{empty}
+\begin{document}
+\begin{center}
+{\fontsize{20}{20}\selectfont Zadanie 10}
+\end{center}
+Rozpatrzmy poszczególne przypadki z zadania:\\
+\begin{adjustwidth}{30pt}{30pt}
+\textbf{1.} - 4 wierzchołki czerwone i 0 białych. Z prostej obserwacji wynika, że jest tylko 1 rozróżnialny kwadrat (wystarczy zastosować na nim np. identycznośc). Gdy dodamy symetrię odpowiedź się nie zmieni.\\
+\textbf{2.} - 3 wierzchołki czerwone i 1 biały.\\
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) -- (2,0) -- (2,2) -- (0,2) -- (0,0);
+\foreach \Point in {(2,0),(2,2),(0,2)}{
+    \node at \Point {\textbullet};
+    \node [red] at \Point {\textbullet};
+}
+\node at (0,0) {\textbullet};
+\node [white] at (0,0) {\textbullet}; 
+
+\end{tikzpicture}
+\end{center}
+Zauważmy, że wsytarczy obrócić kwadrat o jeden z kątów - 90\textdegree, 180\textdegree ,270\textdegree aby przenieść biały wierzchołek w dowolny inny. Zatem dla obrotów jak i obrotów z symetrią mamy tylko 1 rozróżnialny kwadrat.\\
+\textbf{3.} - 2 wierzchołki czerwone i 2 białe.\\
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) -- (2,0) -- (2,2) -- (0,2) -- (0,0);
+\foreach \Point in {(2,0),(2,2)}{
+    \node at \Point {\textbullet};
+    \node [red] at \Point {\textbullet};
+}
+\node at (0,0) {\textbullet};
+\node [white] at (0,0) {\textbullet};
+\node at (0,2) {\textbullet};
+\node [white] at (0,2) {\textbullet};
+
+\draw (4,0) -- (6,0) -- (6,2) -- (4,2) -- (4,0);
+\foreach \Point in {(4,0),(6,2)}{
+    \node at \Point {\textbullet};
+    \node [red] at \Point {\textbullet};
+}
+\node at (6,0) {\textbullet};
+\node [white] at (6,0) {\textbullet};
+\node at (4,2) {\textbullet};
+\node [white] at (4,2) {\textbullet}; 
+\end{tikzpicture}
+\end{center}
+Intuicyjnie to powinny być jedyne dwa rozróżnialne kwadraty dla obrotu jak i obrotu z symetrią, sprawdźmy to wykorzystując lemat Burnside'a:\\
+$$|A| = \frac{1}{|G|} \sum_{g \in G}fix(g) $$
+Gdzie $|A|$ to ilość orbit, czyli szukane rozróżnialne kwadraty. Mamy 8 przekształceń:\\
+\\ przekształcenie identyczności $e$ - możliwe kolorowanie wierzchołków to ($ (4\cdot 3) \div 2 = 6 $) i każde z nich jest punktem stałym.\\
+\\ obrót o 90 \textdegree - 0 punktów stałych \\
+\\ obrót o 180 \textdegree - sytuacja, kiedy narożniki naprzeciwko (względem przekątnej) siebie mają ten sam kolor, czyli 2 punkty stałe \\
+\\ obrót o 270 \textdegree - 0 punktów stałych \\
+\\ symetria wzdłóż jednej z przekątnych - dla jednej przekątnej są 2 punkty stałe, narożniki naprzeciwko (względem przekątnej) siebie mają ten sam kolor \\ 
+\\ symetria przez bok - dla jednego boku są 2 punkty stałe, wtedy kiedy narożniki wzdłóż tego samego boku mają ten sam kolor \\
+Dla grupy obrotów kwadratu ze złożeniem przekształceń mamy:
+$$|A| = \frac{1}{4} \cdot (0 + 6 + 0 + 2) = 2$$
+Dla grupy obrotów i symetrii kwadratu ze złożeniem przekształceń mamy:
+$$|A| = \frac{1}{8} \cdot (0 + 6 + 0 + 2 + 4 + 4) = 2$$
+Zatem w przypadku, gdy 2 wierzchołki są białe istnieją 2 różne kwadraty.\\
+\textbf{4.} - 3 wierzchołki białe i 1 czerwony. Analogicznie jak w 2. , 1 rozróżnialny kwadrat.\\
+\textbf{5.} - 4 wierzchołki białe i 0 czerwonych. Analogicznie jak w 1. , 1 rozróżnialny kwadrat.
+\end{adjustwidth}
+\end{document}

@@ -1,0 +1,143 @@
+PIOTR PIESIAK
+1 2 3 4 5 6
+7 punktów
+
+zad1:
+przypadek 1)
+obrazek, ktory ma w lewym narozniku jedynki oraz na koncu jedynke:
+wtedy jego rozwiazania wygladaja
+  1 0 0 ... 1
+1 # . . ... .     
+0 . . . ... .
+0 . . . ... .
+. . . . ... .
+. . . . ... .
+. . . . ... .
+1 . . . ... #	
+lub
+  1 0 0 ... 1
+1 . . . ... #     
+0 . . . ... .
+0 . . . ... .
+. . . . ... .
+. . . . ... .
+. . . . ... .
+1 # . . ... .
+Są tylko dwa możliwe rozwiązania takiego obrazka.
+przypadek 2)
+(musimy zalozyc, ze N > 2, bo dla N = 1 i N = 2 nie istnieje wiecej niz N rozwiazan)
+  1 1 1 ... 1
+1 # . . ... .     
+1 . # . ... .
+1 . . # ... .
+. . . . #.. .
+. . . . .#. .
+. . . . ..# .
+1 . . . ... #
+W tym wpadku, możemy "przesuwać" przekątną N-1 razy do góry uzyskując za kązdym razem inny obrazek.
+Dodatkowo, możemy ja "przesunąć" w dół lub zorinetować w drugą stronę. Zatem można uzyskać co najmniej N + 1 obrazków.
+
+zad2:
+STAN = (aktualne miasto, ilosc paliwa w baku), stan poczatkowy to (miasto poczatkowe, poczatkowa ilosc paliwa),
+stan koncowy to (miasto koncowe, ilosc paliwa >=0). Jesli w rozwazanym stanie jest stacja to uzupelniamy bak na maksa;
+jesli aktualne miasto to miasto koncowe, to konczymy. Poruszamy sie wzdloz krawedzi i zmieniamy miasto aktualne na to, 
+do ktorego dojechalismy, dodatkowo odejmujemy od ilosci paliwa koszt dojazdu. Rozwazamy te stany, w ktorych
+koszt dojazdu <= ilosci paliwa.
+
+zad3:
+Heurystyka h(x) moze byc euklidesowa tzn. odlegloscia w linii prostej z danego miasta do celu. Bedzie optymistyczna, poniewaz
+odleglosc w linii prostej jest najkrotsza z mozliwych. 
+
+zad4:
+Heurystyka h(x) moze byc podobna jak w zad3, jednak wybieralaby trase, ktora wykorzysta jak najwiecej paliwa w baku:
+s - odleglosc w linni prostej do celu
+h(x) = jezeli akt_ilosc_paliwa >= s to: akt_ilosc_paliwa + s
+w przeciwnym przypadku: akt_ilosc_paliwa += maks_ilosc paliwa, h(x)
+
+Heurystyka ta jest optymistyczna poniewaz liczy najkrotsza odleglosc oraz  zaklada najmniejsza ilosc tankowan.
+Na przyklad, w przypadku gdy beda potrzebne 1 tankowanie paliwa jadac w linii prostej to:  h(x) =akt_ilosc_paliwa + maks_ilosc_paliwa + s,
+a realny koszt moglby byc tylko wyzszy (na pewno bedzie potrzebne min 1 tankowanie paliwa, s > = realny koszt)
+
+zad5:
+
+podpunkt 1)
+maks. wsp. rozgalezienia: f(k) = 8^k, konie w najgorszym wypadku moga sie ruszyc w 8 miejsc
+podpukt 2)
+A - optymistyczna
+B - optymistyczna
+C - nieoptymistyczna , przeszacuje odleglosc (bedzie sie ruszac jednym skoczkiem zamiast wszystkimi)
+podpunkt 3)
+A - optymistyczna
+B - optymistyczna
+C - optymistyczna
+
+zad6:
+import random
+import time
+reset = 0
+
+def good(hetmans,x,y):
+    #sprawdzam czy mozna polozyc hetmana
+    for i in range(len(hetmans)):
+        if abs(x - i) == abs(hetmans[i] - y) or hetmans[i] == y:
+            return False
+    return True
+
+def place(n):
+    i = 0
+    HETMANS = []
+    CHOICES = [j for j in range(n)]
+    while i < n:
+        hetman_i = random.randint(0,n - 1)
+        if good(HETMANS,i,hetman_i):
+            HETMANS.append(hetman_i)
+        else:
+            #tablica CHOICES_tmp bedzie zawierala wybory wierszy
+            #ktore nie zostaly sprawdzone w danej kolumnie
+            CHOICES_tmp = CHOICES.copy()
+            while (not good(HETMANS,i,hetman_i)) and len(CHOICES_tmp) > 0:
+                hetman_i = random.choice(CHOICES_tmp)
+                CHOICES_tmp.remove(hetman_i)
+            if len(CHOICES_tmp) > 0:
+                HETMANS.append(hetman_i)
+            else:
+                if good(HETMANS,i,hetman_i):
+                    HETMANS.append(hetman_i)
+                else:
+                    return (False, -1)
+        i += 1
+    return (True,HETMANS)
+
+def solve_restarts(n):
+    #Aby wyniki byly jednolite i dokladne ilosc testow mozna zwiekszyc do 1 000 000, ale wtedy dlugo trwa
+    TESTS = 1000000
+    TESTS_n = TESTS
+    first = 0
+    while TESTS > 0:
+        ans = place(n)
+        if ans[0] == True:
+            first += 1
+        TESTS -= 1
+    print(f' TESTS: {TESTS_n} , WITHOUT RESTART: {first}, PROBABILITY: {first/TESTS_n * 100}  %')
+def solve_max(n):
+    ans = place(n)
+    while ans[0] != True:
+        ans = place(n)
+    return
+
+def measure():
+    # SZACHOWNICE MNIEJSZE OD 4 SA NIEROZWIAZYWALNE, WIEM ZE DLA 140, srednio czas dzialania < 5 sek
+    i = 135
+    while i < 300:
+        start = time.time()
+        solve_max(i)
+        end = time.time()
+        print(i, end - start)
+        i += 1
+
+#PIERWSZY PODPUNKT
+#solve_restarts(6) ~ 6,923% inaczej 0,06923
+
+##############################
+#DRUGI PODPUNKT
+#measure() 148 to maksymalna odp

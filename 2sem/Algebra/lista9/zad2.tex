@@ -1,0 +1,50 @@
+\documentclass[a4paper]{article}
+% Kodowanie latain 2
+%\usepackage[latin2]{inputenc}
+\usepackage[T1]{fontenc}
+% Można też użyć UTF-8
+\usepackage[utf8]{inputenc}
+
+% Język
+\usepackage[polish]{babel}
+% \usepackage[english]{babel}
+
+% Rózne przydatne paczki:
+% - znaczki matematyczne
+\usepackage{amssymb}
+\usepackage{amsmath, amsfonts}
+% - wcięcie na początku pierwszego akapitu
+\usepackage{indentfirst}
+% - komenda \url 
+\usepackage{hyperref}
+% - dołączanie obrazków
+\usepackage{graphics}
+% - szersza strona
+\usepackage[nofoot,hdivide={2cm,*,2cm},vdivide={2cm,*,2cm}]{geometry}
+\usepackage{lmodern}
+\usepackage{changepage}
+\frenchspacing
+% - brak numerów stron
+\pagestyle{empty}
+\begin{document}
+\begin{center}
+{\fontsize{20}{20}\selectfont Zadanie 2}
+\end{center}
+\begin{adjustwidth}{30pt}{30pt}
+\textbf{1.}Weźmy dowolną macierz symetryczną $M$. Z zadania 1 wiemy, że:
+$$\langle u , Mv \rangle = \langle M^{T}u,v \rangle$$
+$M$ jest symetryczna, zatem $M^{T}u = Mu$ co daje nam:
+$$\langle u , Mv \rangle = \langle Mu,v \rangle$$
+\textbf{2.} Jeśli $\lambda$ i $\lambda'$ są różnymi wartościami własnymi macierzy symetrycznej M o wektorach własnych $v$ i $v'$ to $Mv = \lambda v$ oraz $Mv' = \lambda v'$. Z (1.) wiemy , że:
+$$\langle v' , Mv \rangle = \langle Mv',v \rangle$$
+$$\Updownarrow$$
+$$\langle v' , \lambda v \rangle = \langle \lambda' v',v \rangle$$
+$$\Updownarrow$$
+$$\lambda \langle v' , v \rangle = \lambda' \langle v',v \rangle$$
+$$\Updownarrow$$
+$$\lambda \langle v' , v \rangle - \lambda' \langle v',v \rangle = 0$$
+$$\Updownarrow$$
+$$(\lambda - \lambda') \langle v' , v \rangle = 0$$
+Ponieważ $\lambda \neq \lambda'$ to $\langle v, v' \rangle = 0$, czyli $v$ i $v'$ są prostopadłe.
+\end{adjustwidth}
+\end{document}

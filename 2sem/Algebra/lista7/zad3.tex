@@ -1,0 +1,46 @@
+\documentclass[a4paper]{article}
+% Kodowanie latain 2
+%\usepackage[latin2]{inputenc}
+\usepackage[T1]{fontenc}
+% Można też użyć UTF-8
+\usepackage[utf8]{inputenc}
+
+% Język
+\usepackage[polish]{babel}
+% \usepackage[english]{babel}
+
+% Rózne przydatne paczki:
+% - znaczki matematyczne
+\usepackage{amssymb}
+\usepackage{amsmath, amsfonts}
+% - wcięcie na początku pierwszego akapitu
+\usepackage{indentfirst}
+% - komenda \url 
+\usepackage{hyperref}
+% - dołączanie obrazków
+\usepackage{graphics}
+% - szersza strona
+\usepackage[nofoot,hdivide={2cm,*,2cm},vdivide={2cm,*,2cm}]{geometry}
+\usepackage{lmodern}
+\usepackage{changepage}
+\frenchspacing
+% - brak numerów stron
+\pagestyle{empty}
+\begin{document}
+\begin{center}
+{\fontsize{20}{20}\selectfont Zadanie 3}
+\end{center}
+
+Weźmy dowolną macierz kwadratową $M$, taką że $ \lambda ^2 $ jest wartością własną macierzy $M^2$. Wtedy zbiór wektorów własnych dla $M^2$ to $ker(M^2 - \lambda ^2Id)$. Weźmy dowolny wektor $V \in ker(M^2 - \lambda ^2Id)$:
+$$V \in ker(M^2 - \lambda ^2Id)\Leftrightarrow (M^2 - \lambda ^2Id)V = 0 \Leftrightarrow (M - \lambda Id)(M + \lambda Id) V = 0 $$
+To oznacza, że $(M + \lambda Id) V = 0 \quad \lor \quad (M - \lambda Id) [(M + \lambda Id) V] = 0$,
+ponieważ  $(M + \lambda Id) V$ to wektor, możemy za niego podstawić wektor W i otrzymamy $(M - \lambda Id) W = 0$,  wtedy:\\
+
+\begin{adjustwidth}{30pt}{30pt}
+\textbf{1.} Gdy $(M + \lambda Id) V = 0$ to $V \in ker(M - (-\lambda)Id)$ zatem $-\lambda$ jest wartością własną macierzy $M$.\\
+\textbf{2.} Gdy $(M - \lambda Id) W = 0$ to $W \in ker(M - (\lambda)Id)$ zatem $\lambda$ jest wartością własną macierzy $M$.\\
+\end{adjustwidth}
+Zatem jeśli $ \lambda ^2 $ jest wartością własną macierzy $M^2$ to $-\lambda$ lub $\lambda$ jest wartością własną macierzy $M$.
+
+\hspace{460pt}$\blacksquare$
+\end{document}
