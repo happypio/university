@@ -1,0 +1,41 @@
+Q(ys,xs) === (list? (filter p? (append xs ys))))
+
+BSO
+
+Q(ys,xs) === P(zs) === (list? (filter p? zs))
+
+gdzie, zs to (append xs ys) w tym podstawieniowym modelu obliczeniowym operacja append zostanie wykonana pierwsza.
+
+Rozważmy, jedyne dwa możliwe przypadki:
+
+PODSTAWA INDUKCJI
+
+Pokażmy, że (list? (filter p? null))
+
+(list? (filter p? null)) === z definicji filter
+(list? (if (null? null) null ...)) === z reguł if i null?
+(list? null) ;#t
+
+Pierwszy przypadek udowodniony git
+
+KROK INDUKCYJNY
+
+Weźmy dowolne x,xs i załóżmy, że P(xs). Pokażemy P((cons x xs)):
+
+(list? (filter p? (cons x xs))) === z definicji filter
+(list? (cond ((null? (cons x xs) null)
+		((p? (car (cons x xs))
+		(cons (car (cons x xs))
+			(filter p? (cdr (cons x xs)))))
+		(else (filter p? (cdr (cons x xs)))))) === z reguł dla cond i null
+
+1) (p? (car (cons x xs)) = #t
+(cons (car (cons x xs))
+	(filter p? (cdr (cons x xs)))) == z def cdr cons i car i zał ze P(xs) = #t
+(list? (cons x (filter p? xs))) == #t z def cons
+
+2) (p? (car (cons x xs)) = #f
+(filter p? (cdr (cons x xs))) == z def cdr i cons i zał ze P(xs) = #t
+(list? (filter p? xs)) == #t
+	
+

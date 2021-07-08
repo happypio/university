@@ -1,0 +1,87 @@
+#lang racket
+
+;wzorowalem funkcje z kodu z wykladu
+
+(define (identity x) x)
+
+(define (inc x)
+  (+ x 1))
+(define (dec x)
+  (- x 1))
+(define (compose f g)
+  (lambda (x) (f (g x))))
+
+(define (close-to? x y)
+  (< (abs (- x y)) 0.00001))
+
+(define (fixed-point s f)
+  (if (close-to? s (f s))
+      s
+      (fixed-point (f s) f)))
+
+(define (average x y)
+  (/ (+ x y) 2))
+
+(define (average-damp f)
+  (lambda (x)
+    (average x (f x))))
+
+(define (repeated p n)
+  (if (= n 0)
+      (lambda (x) (identity x))
+      (compose p (repeated p (- n 1)))))
+
+;(define sqrt2
+ ; (let* ((transform (lambda (x) (/ 2 x)))
+  ;       (fp (fixed-point 1.0 (average-damp transform))))
+   ; (display "Przybliżona wartość pierwiastka z dwóch: ")
+    ;(displayln fp)
+    ;(close-to? 2 (* fp fp))))
+
+(define (power x n)
+  (if (= n 0)
+      1
+      (* x (power x (- n 1)))))
+
+;FUNKCJA DO EKSPERYMENTOWANIA Z TLUMIENIAMI
+
+(define (ilosc-tlumien what degree damping)
+  (let* ((transform (lambda (x) (/ what (power x (- degree 1)))))
+        (fp (fixed-point 1.0 ((repeated average-damp damping) transform))))
+    (display fp)
+    (close-to? what (power fp degree))))
+    
+; (ilosc-tlumien 2 2 1) -> #t
+; (ilosc-tlumien 8 3 1) ->#t
+; (ilosc-tlumien 16 4 2) -> trzeba zwiekszysc ilosc tlumien
+; (ilosc-tlumien 32 5 2) -> #t (funkcja close-to dla wiekszych poteg z powodu innej dokaldnosci zwraca false, ale mozna to pominac)
+; (ilosc-tlumien 64 6 2) -> #t
+; (ilosc-tlumien 128 7 2) -> #t
+; (ilosc-tlumien 256 8 3) -> trzeba zwiekszyc ilosc tlumien
+; zauwazylem ze liczba tlumien wzrasta wtedy kiedy stopien jest kolejna potega 2, sprawdzam:
+; (ilosc-tlumien 32768 15 3) -> #t
+; (ilosc-tlumien 65536 16 4) -> trzeba zwiekszyc
+
+
+
+;  ########### ZATEM ILOSC TLUMIEN TO CZESC CALKOWITA Z LOG(STOPIEN PIERWIASTKA)
+
+
+(define (nth-root x n)
+  (define z (abs x))
+  (define damping (truncate (log z 2)))
+  (define transform (lambda (y) (/ x (power y (- n 1)))))
+  (define fp (fixed-point 1.0 ((repeated average-damp damping) transform)))
+  fp)
+
+;TESTY
+;(nth-root -8 3)
+;(nth-root 81 4)
+;(nth-root 27 3)
+;(nth-root 10 2)
+;(nth-root (power 6 8) 8)
+;(nth-root 81 4)
+;(nth-root 81 4)
+;(nth-root 81 4)
+;(nth-root 81 4)
+;(nth-root 81 4)

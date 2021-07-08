@@ -1,0 +1,11 @@
+#lang racket
+(define (suma_kwadratow x y z)
+  (define (square x) (* x x))
+  (define (wiekszy x y)
+    (if (> x y) x y))
+  (define (suma_kw x y) (+ (square x) (square y)))
+  (define (solution)
+    (cond ((and (> x y) (> x z)) (suma_kw x (wiekszy y z)))
+          ((and (> y x) (> y z)) (suma_kw y (wiekszy x z)))
+          (else (suma_kw z (wiekszy x y)))))
+  (solution))

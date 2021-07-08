@@ -1,0 +1,2 @@
+#lang racket
+(struct node (data l r) #:transparent)

@@ -1,5 +1,7 @@
 #lang racket
-;PRACA GRUPOWA: MARCIN BADOWSKI, MAURYCY BROKOWSKI, FILIP KOMOROWSKI, PIOTREK PIESIAK
+
+;PRACA GRUPOWA Filip Komorowski, Maurycy Borkowski, Marcin Badowski, Piotr Piesiak
+
 (require "graph.rkt")
 (provide bag-stack@ bag-fifo@)
 
@@ -22,17 +24,15 @@
   (define (bag-insert b v)
     (if (bag-empty? b)
         (list 'bag-stack (list v))
-        (list (first b) (cons v (second b)))))
+    (list (first b) (cons v (second b)))))
   
   (define (bag-peek b)
     (car (second b)))
 
-
   (define (bag-remove b)
     (if (null? (second b))
         empty-bag
-        (list (first b) (cdr (second b)))))
-
+    (list (first b) (cdr (second b)))))
 )
 
 ;; struktura danych - kolejka FIFO
@@ -41,6 +41,8 @@
   (export bag^)
   
   ;; TODO: zaimplementuj
+
+  ;Kolejka -> ('label input output)
   
   (define (bag? b)
     (and (list? b)
@@ -94,15 +96,15 @@
   (quickcheck
    (property ([s arbitrary-symbol])
              (bag-empty? (bag-remove (bag-insert empty-bag s)))))
-   (quickcheck ;Czy dodany JEDEN element jest wyrzucany przes baga
-    (property ([s arbitrary-symbol])
-             (equal? s (bag-peek (bag-insert empty-bag s)))))
-;   (quickcheck ;Czy dodany JEDEN element jest wyrzucany przes baga
-;    (property ([l (arbitrary-list arbitrary-symbol)])
-;             (equal? s (bag-peek (bag-insert empty-bag s)))))
-  
   ;; TODO: napisz inne własności do sprawdzenia!
+  
+  ;Czy to dodamy do pustego baga to to samo co bag-peek
+  (quickcheck
+   (property ([s arbitrary-symbol])
+             (equal? s (bag-peek (bag-insert empty-bag s)))))
+  
 )
+
 (define-unit stack-tests@
   (import bag^)
   (export)
@@ -110,12 +112,24 @@
   (quickcheck
    (property ([a arbitrary-symbol]
              [b arbitrary-symbol])
-            (eq? (bag-peek (bag-insert (bag-insert empty-bag a) b) ) b))) 
-
+            (eq? (bag-peek (bag-insert (bag-insert empty-bag a) b) ) b)))
+  
   (quickcheck
    (property ([l (arbitrary-list arbitrary-symbol)]
-              [s arbitrary-symbol])
-             (eq? s (bag-peek (bag-insert (list 'bag-stack l) s)))))
+          	[s arbitrary-symbol])
+         	(eq? s (bag-peek (bag-insert (list 'bag-stack l) s)))))
+  
+  (quickcheck ;Czy w stacku elementy są odwrotnie jak na liście
+   (property ([l (arbitrary-list arbitrary-symbol)])
+         	(==> (not (empty? l))
+              	(let ([b (foldl (lambda (x s) (bag-insert s x)) empty-bag l)])
+                	(define (check-contain bg xs)
+                  	(if (or (bag-empty? bg) (empty? xs))
+                      	(and (bag-empty? bg) (empty? xs))
+                      	(and (equal? (bag-peek bg) (car xs)) (check-contain (bag-remove bg) (cdr xs)))))
+                	(check-contain b (reverse l))
+                	))))
+
    
 )
 (define-unit queue-tests@
@@ -126,9 +140,19 @@
    (property ([a arbitrary-symbol]
              [b arbitrary-symbol])
             (eq? (bag-peek (bag-insert (bag-insert empty-bag a) b) ) a)))
+
+  (quickcheck ;Czy w stacku elementy są odwrotnie jak na liście
+   (property ([l (arbitrary-list arbitrary-symbol)])
+         	(==> (not (empty? l))
+              	(let ([b (foldl (lambda (x s) (bag-insert s x)) empty-bag l)])
+                	(define (check-contain bg xs)
+                  	(if (or (bag-empty? bg) (empty? xs))
+                      	(and (bag-empty? bg) (empty? xs))
+                      	(and (equal? (bag-peek bg) (car xs)) (check-contain (bag-remove bg) (cdr xs)))))
+                	(check-contain b l)
+                	))))
    
 )
-
 
 ;; uruchomienie testów dla obu struktur danych
 
@@ -137,9 +161,10 @@
 (invoke-unit stack-tests@ (import (prefix stack: bag^)))
 (invoke-unit queue-tests@ (import (prefix fifo: bag^)))
 
-
 ;; TODO: napisz też testy własności, które zachodzą tylko dla jednej
 ;; z dwóch zaimplementowanych struktur danych
+
+
 
 ;; otwarcie komponentu grafu
 (define-values/invoke-unit/infer simple-graph@)
@@ -161,39 +186,27 @@
    (list (edge 1 3)
          (edge 1 2)
          (edge 2 4))))
+;; TODO: napisz inne testowe grafy
 
 (define test-graph2
   (graph
    (list 1 2 3 4 5 6)
    (list (edge 1 2)
-         (edge 1 3)
-         (edge 1 4)
-         (edge 2 5)
-         (edge 4 6))))
+     	(edge 1 3)
+     	(edge 1 4)
+     	(edge 2 5)
+     	(edge 4 6))))
 
 (define test-graph3
-  (graph
-   (list (list 1 2) 'w 2 '3 '4 's 'g)
-   (list (edge (list 1 2) 'w)
-         (edge (list 1 2) 2)
-         (edge 'w (list 1 2))
-         (edge 2 '3)
-         (edge '4 's)
-         (edge '3 '4)
-         (edge 'w 'g))))
-
-(define test-graph4
   (graph
    (list 'w 2)
    (list (edge 'w 2))))
 
-;; TODO: napisz inne testowe grafy
-
 ;; uruchomienie przeszukiwania na przykładowym grafie
 (bfs:search test-graph 1)
 (dfs:search test-graph 1)
+;; TODO: uruchom przeszukiwanie na swoich przykładowych grafach
 (bfs:search test-graph2 1)
 (dfs:search test-graph2 1)
-(bfs:search test-graph4 1)
-(dfs:search test-graph4 1)
-;; TODO: uruchom przeszukiwanie na swoich przykładowych grafach
+(bfs:search test-graph3 'w)
+(dfs:search test-graph3 'w)

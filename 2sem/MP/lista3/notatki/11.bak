@@ -1,0 +1,4 @@
+#lang racket
+(define xs (list 2 3 1))
+(define ys (list 0 5 3))
+(map (lambda (x) (* x x)) (append xs ys))
