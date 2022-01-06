@@ -1,10 +1,9 @@
 #include<stdio.h>
-char tab1[10003];
-//zamiast if switch case
 
 int main(void)
 {
     int c,i=0;
+    char tab1[10003];
 
     while((c=getchar())&&c!=EOF)
     {
@@ -17,7 +16,6 @@ int main(void)
         if(c==')' || c=='}' || c==']')
         {
             char tmp;
-		
             if(c==')')
                 tmp='(';
             if(c=='}')

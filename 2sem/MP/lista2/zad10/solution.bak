@@ -1,0 +1,26 @@
+#lang racket
+
+(define (good-enough? now before)
+  (< (abs (- now before))
+       0.000001))
+
+(define (przybliz num den)
+  (define (iter a1 a2 b1 b2 n before)
+    (define an (+ (* (den n) a1)
+                  (* (num n) a2)))
+    (define bn (+ (* (den n) b1)
+                  (* (num n) b2)))
+    (define now (/ an bn))
+    (if (good-enough? now before)
+        now
+        (iter an a1 bn b1 (+ n 1) now)))
+    (iter 0 1 1 0 1 0))
+
+(define (atan-cf x)
+  (define num
+    (lambda (n) (* (+ n 1) (+ n 1))))
+  (define den
+    (lambda (n) (+ (* 2.0 n) 1)))
+  (/ x (+ 1 (przybliz num den))))
+  
+    

@@ -1,0 +1,7 @@
+#lang racket
+;(define (reverse lista)
+  ;(if (null? lista)
+  ;    null
+ ;     (append (reverse-r (cdr lista)
+
+(define lista (cons 1 (cons 2 (cons 4 nil))))

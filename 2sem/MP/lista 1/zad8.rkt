@@ -1,0 +1,15 @@
+#lang racket
+(define (power-close-to b n)
+  (define (iter x)
+    (if (> (expt b x) n)
+        x
+        (iter (+ x 1))))
+  (define (iter2 x)
+    ( if (< (expt b x) n)
+         (if (> (expt b (+ x 1)) n)
+             (+ x 1)
+             (+ x 2))
+         (iter2 (- x 1))))
+  (if(< n 1)
+  (iter2 0)
+   ))
