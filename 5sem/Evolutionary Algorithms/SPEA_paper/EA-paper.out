@@ -1,0 +1,7 @@
+\BOOKMARK [1][-]{section.1}{Optymalizacja wielokryterialna - definicje}{}% 1
+\BOOKMARK [1][-]{section.2}{Algorytm SPEA}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Zarys algorytmu}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Selekcja}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Krzyzowanie i mutacje}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Redukcja zbioru Pareto}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{Dzia\233anie w praktyce - f2 funkcja Shaffer'a}{}% 7
